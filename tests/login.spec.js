@@ -1,7 +1,26 @@
 const {test,expect}=require('@playwright/test')
 
 test("LoginTest",async function({page}){
-    expect(2).toBe(2)
+    // 1. Open EyeOnTask login page 
+    await page.goto('https://www.eyeontask.com/login'); 
+    
+    // 2. Enter username 
+    await page.getByPlaceholder('Username').fill('YOUR_USERNAME'); 
+    
+    // 3. Click Next button 
+    await page.getByRole('button', { name: 'Next' }).click(); 
+    
+    // 4. Enter password 
+    await page.getByPlaceholder('Enter your password').fill('YOUR_PASSWORD'); 
+    
+    // 5. Click Login button 
+    await page.getByRole('button', { name: 'Login' }).click(); 
+    
+    // 6. Verify dashboard page is opened 
+    await expect(page).toHaveURL(/dashboard/); 
+    
+    // Optional: Verify dashboard is visible 
+    await expect(page.getByText('Dashboard')).toBeVisible();
 })
 
 test("Add quote",async function({page}){
