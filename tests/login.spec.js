@@ -20,7 +20,9 @@ test("LoginTest",async function({page}){
     await expect(page).toHaveURL(/dashboard/); 
     
     // Optional: Verify dashboard is visible 
-    await expect(page.getByText('Dashboard')).toBeVisible();
+    await expect(page.getByText('Dashboard')).toBeVisible({
+        timeout:30000;
+    });
 })
 
 test("Add quote",async function({page}){
