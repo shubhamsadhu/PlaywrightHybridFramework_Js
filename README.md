@@ -9,7 +9,7 @@
 
 Clone the repository:
 
-git clone <repository-url>
+git clone https://github.com/shubhamsadhu/PlaywrightHybridFramework_Js.git
 
 Go to project directory:
 
