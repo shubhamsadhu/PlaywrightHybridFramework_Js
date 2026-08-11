@@ -5,13 +5,13 @@ test("LoginTest",async function({page}){
     await page.goto('https://www.eyeontask.com/login'); 
     
     // 2. Enter username 
-    await page.getByPlaceholder('Username').fill('YOUR_USERNAME'); 
+    await page.getByPlaceholder('Username').fill('shubh_au'); 
     
     // 3. Click Next button 
     await page.getByRole('button', { name: 'Next' }).click(); 
     
     // 4. Enter password 
-    await page.getByPlaceholder('Enter your password').fill('YOUR_PASSWORD'); 
+    await page.getByPlaceholder('Enter your password').fill('123'); 
     
     // 5. Click Login button 
     await page.getByRole('button', { name: 'Login' }).click(); 
