@@ -11,7 +11,7 @@ test("LoginTest",async function({page}){
     await page.getByRole('button', { name: 'Next' }).click(); 
     
     // 4. Enter password 
-    await page.getByPlaceholder('Enter your password').fill('123'); 
+    await page.locator('input[name="password"]').fill('123'); 
     
     // 5. Click Login button 
     await page.getByRole('button', { name: 'Login' }).click(); 
