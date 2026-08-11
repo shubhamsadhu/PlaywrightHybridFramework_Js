@@ -20,10 +20,7 @@ test("LoginTest",async function({page}){
     await expect(page).toHaveURL(/dashboard/); 
     
     // Optional: Verify dashboard is visible 
-    await expect(page.getByRole('button', { name: 'Add Widgets' })
-    ).toBeVisible({
-        timeout: 30000
-    });
+    await expect(page.getByText('Dashboard')).toBeVisible();
 })
 
 // test("Add quote",async function({page}){
